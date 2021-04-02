@@ -1,0 +1,462 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  font-weight: 500;
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
+}
+a {
+  list-style: none !important;
+  text-decoration: none !important;
+}
+.flow-visible {
+  overflow: visible;
+}
+body {
+  background: #091630 !important;
+  overflow: hidden;
+  color: #8892b0 !important;
+}
+
+.loader {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  /* animation: anim2 3s cubic-bezier(0.19, 1, 0.22, 1) 4.5s both; */
+}
+.wraploader {
+  width: 500px;
+  height: 100px;
+  overflow: hidden;
+}
+.wraploader .elem {
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wraploader .elem:nth-child(1) {
+  animation: anim 2s cubic-bezier(0.19, 1, 0.22, 1) 2s both;
+}
+.wraploader .elem:nth-child(2) {
+  animation: anim 2s cubic-bezier(0.19, 1, 0.22, 1) 3s both;
+}
+@keyframes anim {
+  to {
+    margin-top: -100px;
+  }
+}
+@keyframes anim2 {
+  to {
+    height: 0%;
+  }
+}
+
+.header {
+  padding: 10px 0;
+  transition: all 0.8s ease;
+}
+.fixed-top {
+  position: fixed;
+}
+
+.header .menu a {
+  margin: 0 20px;
+  color: #8892b0;
+  font-weight: 600;
+  font-size: 20px;
+}
+.header nav a:hover {
+  color: #1ab394;
+}
+.header .logo {
+  margin-left: 32px;
+  font-size: 30px;
+  font-weight: 600;
+  color: #8892b0;
+}
+.header-sticky .menu a {
+  color: white;
+}
+
+/* social button left side */
+
+.social-box {
+  position: fixed;
+  left: 1.5rem;
+  bottom: 20px;
+  width: 1.5rem;
+  z-index: 100;
+}
+.follow-label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 60px;
+  height: 2px;
+  background: #1ab394;
+}
+.follow-label {
+  padding-right: 5rem;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  color: #3c3c3c;
+  line-height: 1.5rem;
+  height: 1.5rem;
+  white-space: nowrap;
+  transform-origin: 100% 0;
+  text-align: right;
+  transform: rotate(90deg);
+}
+
+.social i {
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: black;
+}
+.social i:hover {
+  color: #7000ff;
+  filter: drop-shadow(0 0 1rem #7000ff);
+}
+
+/* landing page section */
+
+.full-screen {
+  height: 100vh;
+}
+.hero-content {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header-sticky {
+  background-color: #01adfe;
+  padding: 5px 0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.emoji {
+  display: inline-block;
+  vertical-align: text-top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 28px;
+  height: 28px;
+  background-image: url("images/wave.png");
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.line {
+  position: relative;
+}
+.name {
+  font-weight: 600;
+  font-size: 64px;
+  color: #5c00ff;
+}
+.name .line::after {
+  content: "";
+  position: absolute;
+  left: 0%;
+  width: 100%;
+  height: 5px;
+  border-radius: 10px;
+  background-image: linear-gradient(90deg, #9f55ff, #7000ff);
+  box-shadow: 0 0 10px #7000ff;
+  bottom: 0;
+  z-index: -1;
+}
+
+/* about me section  */
+
+.section-title h2::before {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  content: "";
+  border-radius: 26% 74% 73% 27% / 49% 33% 67% 51%;
+  background-image: linear-gradient(45deg, #91008f 10%, #01adfe 90%);
+  animation: rotate 7s linear infinite;
+  bottom: 0;
+  left: -11%;
+  z-index: -1;
+  transition: all 0.5s;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.section-title {
+  text-align: center;
+  padding: 30px 0;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 52px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 0;
+  color: #3b434a;
+  position: relative;
+  display: inline;
+  background: -webkit-linear-gradient(#fff, #3393);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.personal-info p {
+  font-size: 20px;
+}
+.link {
+  position: relative;
+  color: #7000ff;
+}
+.link::after {
+  content: "";
+  display: block;
+  bottom: -5px;
+  height: 1px;
+  width: 0%;
+  background-color: #7000ff;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  position: absolute;
+  left: 0;
+}
+.link:hover {
+  color: #7000ff;
+}
+.link:hover::after {
+  width: 100%;
+  right: 0%;
+}
+
+/* work section */
+
+.portfolio-item:hover .portfolio-image img {
+  transform: scale(2);
+  animation: updown 10s linear infinite alternate;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(0%);
+  }
+
+  50% {
+    transform: translateY(-50%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+.portfolio-image img {
+  min-width: 100%;
+}
+.portfolio-item {
+  position: relative;
+  border-radius: 6px;
+}
+.portfolio-image {
+  overflow-y: hidden;
+  max-height: 303px;
+  border-radius: 6px;
+}
+.portfolio-item:hover .portfolio-info {
+  opacity: 1;
+  bottom: 20px;
+}
+.portfolio-info {
+  opacity: 0;
+  transition: all ease-in-out 0.3s;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.preview-link,
+.code-link {
+  background-color: #000000d6;
+  padding: 10px;
+  border-radius: 4px;
+  margin-right: 20px;
+}
+.portfolio-info span {
+  margin-left: 10px;
+}
+
+/* contact me section */
+
+.contact .info-box {
+  color: #444444;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+  padding: 20px 0 30px 0;
+}
+.contact .info-box i.fas {
+  font-size: 24px;
+  color: #ffb727;
+  border-radius: 50%;
+  padding: 15px;
+  background: #fff6e4;
+}
+.contact .info-box h3 {
+  font-size: 20px;
+  color: #777777;
+  font-weight: 700;
+  margin: 10px 0;
+}
+.contact .social-links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+.contact .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  color: #687683;
+  line-height: 1;
+  margin: 0 8px;
+  transition: 0.3s;
+  padding: 14px;
+  border-radius: 50px;
+  border: 1px solid #dde1e4;
+}
+.contact .php-email-form {
+  box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+  padding: 27px;
+}
+.contact .php-email-form button[type="submit"] {
+  background: #ffb727;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 5px;
+}
+section {
+  padding: 60px 0;
+}
+
+/* .img-h {
+  background: red;
+  position: relative;
+  display: inline-block;
+  width: auto;
+}
+.img-bg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  bottom: 0%;
+  background-color: #fff;
+  transform-origin: bottom center;
+  overflow: hidden;
+}
+.img-bg i {
+  width: auto;
+  filter: grayscale();
+  height: 140px;
+}
+.bg-inmg {
+  position: absolute;
+  top: 0;
+  max-width: 100%;
+  width: auto;
+  height: 100%;
+  overflow: hidden;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.bg-inmg i {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+} */
+
+.single-progress-bar .progress {
+  background: #d7d7d7 none repeat scroll 0 0;
+  border-radius: 0;
+  height: 3px; /*10px*/
+  margin-bottom: 21px;
+  margin-top: 5px;
+  overflow: visible;
+  box-shadow: none;
+}
+.progress-wraper .single-progress-bar:last-child .progress {
+  margin-bottom: 0;
+}
+.single-progress-bar .progress-bar {
+  background: #8490ff none repeat scroll 0 0;
+  position: relative;
+  -webkit-transition: width 1.5s ease-in-out 0s;
+  transition: width 1.5s ease-in-out 3s;
+  box-shadow: none;
+  overflow: visible;
+  width: 0%;
+}
+.single-progress-bar .progress-bar > span {
+  background: #8690e8 none repeat scroll 0 0;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  font-size: 80%;
+  line-height: 1;
+  padding: 3px 7px;
+  position: absolute;
+  right: -15px;
+  top: -25px;
+}
+.single-progress-bar .progress-bar > span:after {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #8690e8;
+  content: "";
+  left: 50%;
+  margin-left: -6px;
+  position: absolute;
+  top: 100%;
+}
+.single-progress-bar {
+  overflow: hidden;
+}
